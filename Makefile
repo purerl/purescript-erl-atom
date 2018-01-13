@@ -3,10 +3,10 @@
 all: ps erl
 
 ps:
-	psc-package sources | xargs purs compile 'src/**/*.purs'
+	psc-package sources | xargs purs compile 'src/**/*.purs' 'test/**/*.purs'
 
 test: ps erl
-	erl -pa ebin -noshell -eval '(test_main:main())()' -eval 'init:stop()'
+	erl -pa ebin -noshell -eval 'test_main@ps:main@c()' -eval 'init:stop()'
 
 erl:
 	mkdir -p ebin
