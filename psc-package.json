@@ -1,9 +1,9 @@
 {
-    "name": "purescript-erl-atom",
-    "set": "erl-0.11.6-1",
-    "source": "https://github.com/purerl/package-sets.git",
-    "depends": [
-        "symbols",
-        "prelude"
-    ]
+  "name": "purescript-erl-atom",
+  "set": "erl-0.12.0-20180719",
+  "source": "https://github.com/purerl/package-sets.git",
+  "depends": [
+    "prelude",
+    "unsafe-coerce"
+  ]
 }

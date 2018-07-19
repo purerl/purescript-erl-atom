@@ -8,6 +8,8 @@ foreign import data Atom :: Type
 -- | For Unicode characters > 255 this requires Erlang/OTP 20.
 foreign import atom :: String -> Atom
 
+foreign import toString :: Atom -> String
+
 foreign import eqImpl :: Atom -> Atom -> Boolean
 
 instance atomEq :: Eq Atom where
