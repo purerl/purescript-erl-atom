@@ -15,3 +15,5 @@ foreign import eqImpl :: Atom -> Atom -> Boolean
 instance atomEq :: Eq Atom where
   eq = eqImpl
 
+instance atomShow :: Show Atom where
+  show atom = "atom(" <> toString atom <> ")"
