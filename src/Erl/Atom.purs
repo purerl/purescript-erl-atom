@@ -16,4 +16,4 @@ instance atomEq :: Eq Atom where
   eq = eqImpl
 
 instance atomShow :: Show Atom where
-  show atom = "atom(" <> toString atom <> ")"
+  show x = "atom(" <> toString x <> ")"
