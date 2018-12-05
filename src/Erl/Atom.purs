@@ -1,4 +1,4 @@
-module Erl.Atom (Atom, atom) where
+module Erl.Atom (Atom, atom, toString) where
 
 import Prelude
 
