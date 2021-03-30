@@ -2,14 +2,20 @@ module Test.Main where
 
 import Prelude
 
-import Erl.Atom (Atom, atom)
+import Effect (Effect)
+import Erl.Atom (Atom, atom, toString)
+import Erl.Atom.Symbol (toAtom)
 import Erl.Atom.Symbol as S
+import Test.Assert (assert)
 
-test1 :: Atom
-test1 = atom "test"
+test :: Atom
+test = atom "test"
 
-test2 :: S.Atom "hello"
-test2 = S.atom
+hello :: S.Atom "hello"
+hello = S.atom
 
-test3 :: Boolean
-test3 = atom "abc" == S.toAtom (S.atom :: S.Atom "abc")
+main :: Effect Unit
+main = do
+  assert $ atom "abc" == S.toAtom (S.atom :: S.Atom "abc")
+  assert $ toString test == "test"
+  assert $ atom "hello" == toAtom hello 
