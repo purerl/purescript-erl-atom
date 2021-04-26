@@ -17,3 +17,14 @@ instance atomEq :: Eq Atom where
 
 instance atomShow :: Show Atom where
   show x = "atom(" <> toString x <> ")"
+
+instance ordAtom :: Ord Atom where
+  compare = ordAtomImpl LT EQ GT
+
+foreign import ordAtomImpl
+  :: Ordering
+  -> Ordering
+  -> Ordering
+  -> Atom
+  -> Atom
+  -> Ordering
