@@ -16,7 +16,7 @@ instance atomEq :: Eq Atom where
   eq = eqImpl
 
 instance atomShow :: Show Atom where
-  show x = "atom(" <> toString x <> ")"
+  show x = "atom \"" <> toString x <> "\""
 
 instance ordAtom :: Ord Atom where
   compare = ordAtomImpl LT EQ GT
